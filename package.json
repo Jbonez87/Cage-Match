@@ -1,0 +1,26 @@
+{
+  "name": "game-to-make",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jbonez87/game-to-make.git"
+  },
+  "author": "John Castrillon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jbonez87/game-to-make/issues"
+  },
+  "homepage": "https://github.com/Jbonez87/game-to-make#readme",
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb": "^10.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^2.2.0",
+    "eslint-plugin-react": "^6.2.0"
+  }
+}

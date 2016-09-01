@@ -1,6 +1,9 @@
 body {
   position: relative;
-  background: linear-gradient(rgba(39, 188, 235, 0.63), rgba(36, 148, 177, 0.87));
+  background: linear-gradient(rgba(39, 188, 235, 0.63), rgba(36, 148, 177, 0.87)) no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 45rem;
 }
 
 #John {
@@ -9,5 +12,28 @@ body {
   background-color: rgb(199, 30, 44);
   display: block;
   position: absolute;
-  top: 15rem;
+  right: initial;
+  bottom: 5px;
 }
+
+#opponent
+{
+  height: 10rem;
+  width: 4rem;
+  background-color: rgb(26, 18, 187);
+  display: block;
+  position: absolute;
+  right: 400px;
+  bottom: 5px;
+}
+
+/*transition: 3s all ease
+for punching and kicking animations
+
+ for moving the background(bonus attribute)
+ -webkit-animation: backgroundScroll 100s linear infinite;
+  animation: backgroundScroll 100s linear infinite;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+
+*/

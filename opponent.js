@@ -6,12 +6,19 @@ What does the opponent need to do?
 -opponent needs to be whichever Nicolas Cage the player didn't choose
 -opponent needs to be on opposite side of arena as the player
 -I need to know the opponent's position when a punch is delivered.
-*/ 
+*/
 
 
 class Opponent {
   constructor() {
     this.hitpoints = 1000;
   }
-
+  makeOpponent() {
+    let opponent = document.createElement('div');
+    opponent.setAttribute('id', '#opponent');
+    document.body.appendChild(opponent).setAttribute('style', 'right: 0px');
+  }
+  render() {
+    return this.makeOpponent();
+  }
 }

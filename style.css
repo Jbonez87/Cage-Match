@@ -4,9 +4,55 @@ body {
   background-size: 100%;
   width: 100%;
   height: 45rem;
+  z-index: -1;
+  clear: both;
+}
+/*Attempted to make a background image for a div so that I could
+create a hover effect*/
+/*div.vampire {
+  z-index: 1;
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 300px;
+  background-image: url("http://i.imgur.com/2hTa544.jpg");
+}*/
+img.vampire {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+h1.game-title {
+  font-family: 'Creepster', cursive;
+  font-size: 44px;
+  color: rgb(237, 13, 26);
+  text-align: center;
+}
+
+.container {
+  position: absolute;;
+  width: 100%;
+  bottom: 0;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+.arena {
+  height: 300px;
+  width: 450px;
+  margin: 0 auto;
+  background-color: rgb(168, 172, 180);
+  position: relative;
+  z-index: -1;
+  display: block;
+  clear: both;
+
 }
 
 #John {
+  z-index: 1;
   height: 10rem;
   width: 4rem;
   background-color: rgb(199, 30, 44);
@@ -14,17 +60,18 @@ body {
   position: absolute;
   right: initial;
   bottom: 5px;
+  clear: both;
 }
 
-#opponent
-{
+#opponent {
+  z-index: 1;
   height: 10rem;
   width: 4rem;
-  background-color: rgb(26, 18, 187);
+  background-color: rgb(122, 163, 35);
   display: block;
   position: absolute;
-  right: 400px;
-  bottom: 5px;
+  float: left;
+  top: 5px;
 }
 
 /*transition: 3s all ease

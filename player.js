@@ -25,14 +25,19 @@ The Wicker Man:
         "No! Not the bees! NOT THE BEES! AHHHHH!"*/
 
 class Player {
-  constructor({name, hitpoints}) {
+  constructor(name) {
     this.name = name;
     this.hitpoints = 1000;
+
   }
   makePerson() {
     let player = document.createElement('div');
     player.setAttribute('id', this.name);
     document.body.appendChild(player).setAttribute('style', 'left: 0px');
+  }
+  punch() {
+    const el = document.querySelector('punch');
+    
   }
   render() {
     return this.makePerson();

@@ -1,11 +1,23 @@
 body {
   position: relative;
-  background: linear-gradient(rgba(39, 188, 235, 0.63), rgba(36, 148, 177, 0.87)) no-repeat;
+  background: linear-gradient(rgba(9, 27, 33, 0.63), rgba(100, 161, 177, 0.87)) no-repeat;
   background-size: 100%;
   width: 100%;
   height: 45rem;
   z-index: -1;
   clear: both;
+}
+ul.button-list {
+  display: block;
+}
+li.button-list-item {
+  display: inline-block;
+  float: left;
+}
+button.punch-button {
+  width: 15rem;
+  height: 8rem;
+  font-size: 20px;
 }
 /*Attempted to make a background image for a div so that I could
 create a hover effect*/
@@ -16,7 +28,13 @@ create a hover effect*/
   max-width: 300px;
   max-height: 300px;
   background-image: url("http://i.imgur.com/2hTa544.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }*/
+a.title-link {
+  text-decoration: none;
+}
+
 img.vampire {
   display: block;
   margin: 0 auto;
@@ -29,6 +47,9 @@ h1.game-title {
   font-size: 44px;
   color: rgb(237, 13, 26);
   text-align: center;
+}
+h1.game-title:hover {
+  color: rgb(166, 101, 87);
 }
 
 .container {
@@ -48,30 +69,40 @@ h1.game-title {
   z-index: -1;
   display: block;
   clear: both;
-
+}
+div.container {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  display: block;
 }
 
-#John {
+#john {
   z-index: 1;
   height: 10rem;
-  width: 4rem;
-  background-color: rgb(199, 30, 44);
-  display: block;
+  width: 10rem;
+  /*background-color: rgb(199, 30, 44);*/
+  background-image: url("http://i.imgur.com/4d4OBEe.jpg");
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
   position: absolute;
-  right: initial;
+  float: left;
   bottom: 5px;
-  clear: both;
 }
 
 #opponent {
   z-index: 1;
   height: 10rem;
-  width: 4rem;
-  background-color: rgb(122, 163, 35);
-  display: block;
+  width: 10rem;
+  /*background-color: rgb(199, 30, 44);*/
+  background-image: url("http://i.imgur.com/iQltbQA.jpg");
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
   position: absolute;
-  float: left;
-  top: 5px;
+  float: right;
+  bottom: 5px;
 }
 
 /*transition: 3s all ease

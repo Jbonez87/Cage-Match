@@ -33,11 +33,12 @@ class Player {
   makePerson() {
     let player = document.createElement('div');
     player.setAttribute('id', this.name);
-    document.body.appendChild(player).setAttribute('style', 'left: 0px');
+    let ringSide = document.querySelector('.container');
+    ringSide.appendChild(player).setAttribute('style', 'left: 0px');
   }
   punch() {
     const el = document.querySelector('punch');
-    
+    el.addEventListener
   }
   render() {
     return this.makePerson();

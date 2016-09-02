@@ -24,24 +24,30 @@ The Wicker Man:
         "KILLING ME WON'T BRING BACK YOUR GODDAMN HONEY!"
         "No! Not the bees! NOT THE BEES! AHHHHH!"*/
 
-class Player {
+class Fighter {
   constructor(name) {
     this.name = name;
     this.hitpoints = 1000;
-
+    this.special = 0;
+    this.currentPositionOfFist = currentPositionOfFist;
   }
-  makePerson() {
-    let player = document.createElement('div');
+  makePlayer() {
+    const player = document.createElement('div');
     player.setAttribute('id', this.name);
-    let ringSide = document.querySelector('.container');
+    const ringSide = document.querySelector('.container');
     ringSide.appendChild(player).setAttribute('style', 'left: 0px');
   }
-  punch() {
-    const el = document.querySelector('punch');
-    el.addEventListener
+
+  attacks() {
+    const punch = document.createElement('button');
+    punch.setAttribute('punch-button');
+    punch.innerHTML = 'Punch';
+    const kick = document.createElement('button');
+
   }
   render() {
-    return this.makePerson();
+    const renderArray = [this.attacks(), this.makePlayer()]
+    return renderArray;
   }
   getCurrentPosition(person) {
     let elem = document.querySelectorAll(person)[0];
@@ -60,25 +66,3 @@ class Player {
     return elem;
   }
 }
-//subfunctions to be added as object methods later
-// function getCurrentPosition(person) {
-//   let elem = document.querySelectorAll(person)[0];
-//   let howRight = elem.getAttribute('style').split('left: ')[1]; // left: 0px
-//   let extractedPixels = Number(howRight.replace('px', ''));
-//   return {
-//     elem: elem,
-//     position: extractedPixels
-//   };
-// }
-
-// function move(elemObject) {
-//   let elem = elemObject.elem;
-//   let position = elemObject.position;
-//   console.log(elem, position);
-//   elem.setAttribute('style', `left: ${position + 15}px`);
-//   return elem;
-// }
-
-// const john = new Player({name: 'John', hitpoints: 1000});
-// john.render();
-//  move(getCurrentPosition(john));

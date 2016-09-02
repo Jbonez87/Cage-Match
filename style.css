@@ -1,6 +1,6 @@
 body {
   position: relative;
-  background: linear-gradient(rgba(9, 27, 33, 0.63), rgba(100, 161, 177, 0.87)) no-repeat;
+  background: linear-gradient(rgba(36, 11, 4, 0.98), rgb(184, 17, 17)) no-repeat;
   background-size: 100%;
   width: 100%;
   height: 45rem;
@@ -11,13 +11,26 @@ ul.button-list {
   display: block;
 }
 li.button-list-item {
-  display: inline-block;
+  display: inline;
   float: left;
 }
 button.punch-button {
-  width: 15rem;
-  height: 8rem;
+  width: 10rem;
+  height: 4rem;
   font-size: 20px;
+  background-color: rgba(167, 16, 16, 0.74);
+  color: rgb(244, 237, 231);
+  border-radius: 30%;
+  border: 3px solid black;
+}
+button.kick-button {
+  width: 10rem;
+  height: 4rem;
+  font-size: 20px;
+  background-color: rgba(167, 16, 16, 0.74);
+  color: rgb(244, 237, 231);
+  border-radius: 30%;
+  border: 3px solid black;
 }
 /*Attempted to make a background image for a div so that I could
 create a hover effect*/

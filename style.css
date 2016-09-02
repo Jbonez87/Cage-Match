@@ -7,12 +7,15 @@ body {
   z-index: -1;
   clear: both;
 }
-ul.button-list {
+/*ul.button-list {
   display: block;
 }
 li.button-list-item {
   display: inline;
   float: left;
+}*/
+div.attack-buttons-player {
+  display: inline;
 }
 button.punch-button {
   width: 10rem;

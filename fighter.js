@@ -38,16 +38,25 @@ class Fighter {
     ringSide.appendChild(player).setAttribute('style', 'left: 0px');
   }
 
+  // <ul class="button-list">
+  //   <li="button-list-item">
+  //   </li>
+  //   <li="button-list-item">
+  //   </li>
+  // attacks needs to create both punch and kick buttons and append them to the
+  // button list items
   attacks() {
     const punch = document.createElement('button');
     punch.setAttribute('punch-button');
     punch.innerHTML = 'Punch';
     const kick = document.createElement('button');
+    kick.setAttribute('kick-button');
+    kick.innerHTML = 'Kick';
 
   }
   render() {
-    const renderArray = [this.attacks(), this.makePlayer()]
-    return renderArray;
+    // const renderArray =
+    return this.attacks(), this.makePlayer();
   }
   getCurrentPosition(person) {
     let elem = document.querySelectorAll(person)[0];

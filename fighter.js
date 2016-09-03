@@ -23,55 +23,79 @@ The Wicker Man:
         "How'd it get burned? How'd it get burned? HOW'D IT GET BURNED? HOW'D IT GET BURNED?!"
         "KILLING ME WON'T BRING BACK YOUR GODDAMN HONEY!"
         "No! Not the bees! NOT THE BEES! AHHHHH!"*/
+const ringSide = document.querySelector('.arena');
 
 class Fighter {
-  constructor(name) {
+  constructor(name, opponent, team, side) {
     this.name = name;
+    this.opponent = opponent;
+    this.team = team;
     this.hitpoints = 1000;
-    this.special = 0;
-    this.currentPositionOfFist = currentPositionOfFist;
+    this.fistOffset = 10;
+    this.fighter = null;
+    this.side = side;
+    this.punch = this.punch.bind(this);
   }
-  makePlayer() {
-    const player = document.createElement('div');
-    player.setAttribute('id', this.name);
-    const ringSide = document.querySelector('.container');
-    ringSide.appendChild(player).setAttribute('style', 'left: 0px');
+  setOpponent(opponent) { 
+    this.opponent = opponent;
   }
 
-  // <ul class="button-list">
-  //   <li="button-list-item">
-  //   </li>
-  //   <li="button-list-item">
-  //   </li>
-  // attacks needs to create both punch and kick buttons and append them to the
-  // button list items
-  attacks() {
-    const punch = document.createElement('button');
-    punch.setAttribute('punch-button');
-    punch.innerHTML = 'Punch';
-    const kick = document.createElement('button');
-    kick.setAttribute('kick-button');
-    kick.innerHTML = 'Kick';
-
+  takeDamage(amount) {
+    this.hitpoints -= amount;
+    //add code to make opponent's blood appear
+    this.fighter.setAttribute('style', 'background: linear-gradient(rgba(200, 20, 20, .6), rgba(220, 20, 20 , .5)) url("http://i.imgur.com/4d4OBEe.jpg")')
+    //add code to make opponent's blood disappear
+    this.render();
+    if(this.hitpoints <= 0) {
+      alert('You lose, Cage!');
+      this.totalClear();
+    }
   }
+  totalClear() {
+    this.render();
+    this.hitpoints = 1000;
+    this.opponent.hitpoints = 1000;
+    this.opponent.render();
+  }
+
+  punch() {
+    const me = this;
+    me.fistOffset -= 100;
+    me.opponent.takeDamage(Math.floor(Math.random() * 300));
+    me.render();
+
+    setTimeout(
+      function bringBack() {
+        me.fistOffset += 100;
+        //add code to make opponent's blood disappear
+        me.render()
+      },
+      300000000
+    );
+  }
+
+  clear() {
+    if (this.fighter) {
+      ringSide.removeChild(this.fighter);
+      this.fighter = null;
+    }
+  }
+
   render() {
-    // const renderArray =
-    return this.attacks(), this.makePlayer();
-  }
-  getCurrentPosition(person) {
-    let elem = document.querySelectorAll(person)[0];
-    let howRight = elem.getAttribute('style').split('left: ')[1]; // left: 0px
-    let extractedPixels = Number(howRight.replace('px', ''));
-    return {
-      elem: elem,
-      position: extractedPixels
-    };
-  }
-  move(elemObject) {
-    let elem = elemObject.elem;
-    let position = elemObject.position;
-    console.log(elem, position);
-    elem.setAttribute('style', `left: ${position + 15}px`);
-    return elem;
+    this.clear();
+    this.fighter = document.createElement('div');
+    this.fighter.setAttribute('class', this.team);
+    ringSide.appendChild(this.fighter);
+    let fist = document.createElement('div');
+    fist.setAttribute('class', 'fist');
+    this.fighter.appendChild(fist);
+    fist.setAttribute('style', `${this.side}: ${this.fistOffset}px`);
+    let punch = this.punch;
+    fist.addEventListener('click', punch);
   }
 }
+let j = new Fighter('john', null, 'red', 'left');
+let r = new Fighter('raz', j, 'blue', 'right');
+j.setOpponent(r);
+j.render();
+r.render();

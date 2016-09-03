@@ -16,6 +16,11 @@ li.button-list-item {
 }*/
 div.attack-buttons-player {
   display: inline;
+  float: left;
+}
+div.attack-buttons-opponent {
+  display: inline;
+  float: right;
 }
 button.punch-button {
   width: 10rem;
@@ -69,11 +74,12 @@ h1.game-title:hover {
 }
 
 .container {
-  position: absolute;;
+  position: absolute;
   width: 100%;
   bottom: 0;
   margin: 0 auto;
   overflow: auto;
+  z-index: 0;
 }
 
 .arena {
@@ -93,7 +99,7 @@ div.container {
   display: block;
 }
 
-#john {
+.blue {
   z-index: 1;
   height: 10rem;
   width: 10rem;
@@ -102,12 +108,12 @@ div.container {
   background-position: center;
   background-size: cover;
   display: inline-block;
-  position: absolute;
+  position: relative;
   float: left;
   bottom: 5px;
 }
 
-#opponent {
+.red {
   z-index: 1;
   height: 10rem;
   width: 10rem;
@@ -116,11 +122,24 @@ div.container {
   background-position: center;
   background-size: cover;
   display: inline-block;
-  position: absolute;
+  position: relative;
   float: right;
   bottom: 5px;
 }
+.fist{
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  bottom: 5rem;
+  z-index: 999999;
+}
 
+.red .fist{
+  background-color: red;
+}
+.blue .fist{
+  background-color: blue;
+}
 /*transition: 3s all ease
 for punching and kicking animations
 

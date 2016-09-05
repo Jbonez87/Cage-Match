@@ -1,19 +1,22 @@
-/*pseudo code section:
+/* pseudo code section:
 What does the player need to do?
 -Player should have a name.
 -Player needs a block function.
--Player needs a punch method (round house kick and special move will be bonus moves for later if I have time)
+-Player needs a punch method (round house kick and special move will be bonus
+moves for later if I have time)
 -Player needs a health meter (an actual bar will a bonus later)
 -Player needs a render function
--I'll need to know the player's position when a punch is thrown and then render the animation
+-I'll need to know the player's position when a punch is thrown and then render
+the animation
 then I will need to have them move back into position once the punch is thrown.
 -The ability to choose between ConAir Nicolas Cage and The Wicker Man Nicolas Cage
 -Set hit points(health) and random damage points for punches
-*Bonuses:
+Bonuses:
 -A moving animation
 -A kick and special move animation/methods
 -A health bar and a special move bar
--More Cages: Ghost Rider, Castor Troy and Lord of War editions are top candidates if time allows
+-More Cages: Ghost Rider, Castor Troy and Lord of War editions are top
+candidates if time allows
 -Sound clips for the two Cages:
 Conair: "This ain't happening. Not here, not now."
         "I said... Put. The bunny. Back. In the box."
@@ -46,11 +49,12 @@ class Fighter {
     this.fighter.setAttribute('style', 'background: linear-gradient(rgba(200, 20, 20, .6), rgba(220, 20, 20 , .5)) url("http://i.imgur.com/4d4OBEe.jpg")');
     //add code to make opponent's blood disappear
     this.render();
-    if(this.hitpoints <= 0) {
-      alert('You lose, Cage!');
+    if (this.hitpoints <= 0) {
+      alert(`You lose, ${this.team} Cage!`);
       this.totalClear();
     }
   }
+
   totalClear() {
     this.render();
     this.hitpoints = 1000;

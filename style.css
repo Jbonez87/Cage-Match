@@ -119,6 +119,7 @@ div.container {
   display: inline-block;
   position: relative;
   float: left;
+  left: 10px;
   top: 50px;
 }
 
@@ -133,13 +134,15 @@ div.container {
   display: inline-block;
   position: relative;
   float: right;
+  right: 10px;
   top: 50px;
 }
-.fist{
+.fist {
   height: 2rem;
   width: 2rem;
   position: absolute;
   bottom: 5rem;
+  border-radius: 50%;
   z-index: 999999;
 }
 

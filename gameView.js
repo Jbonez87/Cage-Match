@@ -1,13 +1,12 @@
-// this is where all the click events will go.
-// punch will go here and damage will be logged when
-// the button is pressed.
-// attempted to render all the buttons in the dom. ended up creating the HTML
-// instead
+// should render the start screen and damage to the healthBar
+// also it should display the game instructions and the rounds.
 class Gameview {
   constructor() {
-    this.healthBar = this.fighter.hitpoints;
+    this.start = null;
   }
+
   render() {
-  
+  let health = this;
+  const redHealthBar =
   }
 }

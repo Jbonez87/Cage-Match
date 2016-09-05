@@ -43,7 +43,7 @@ class Fighter {
   takeDamage(amount) {
     this.hitpoints -= amount;
     //add code to make opponent's blood appear
-    this.fighter.setAttribute('style', 'background: linear-gradient(rgba(200, 20, 20, .6), rgba(220, 20, 20 , .5)) url("http://i.imgur.com/4d4OBEe.jpg")')
+    this.fighter.setAttribute('style', 'background: linear-gradient(rgba(200, 20, 20, .6), rgba(220, 20, 20 , .5)) url("http://i.imgur.com/4d4OBEe.jpg")');
     //add code to make opponent's blood disappear
     this.render();
     if(this.hitpoints <= 0) {
@@ -60,17 +60,17 @@ class Fighter {
 
   punch() {
     const me = this;
-    me.fistOffset -= 100;
+    me.fistOffset -= 140;
     me.opponent.takeDamage(Math.floor(Math.random() * 300));
     me.render();
 
     setTimeout(
       function bringBack() {
-        me.fistOffset += 100;
+        me.fistOffset += 140;
         //add code to make opponent's blood disappear
         me.render()
       },
-      300000000
+      300
     );
   }
 

@@ -5,11 +5,9 @@
 // instead
 class Gameview {
   constructor() {
-    // this.el = document.createElement('li');
-    // this.el.className = 'punch';
+    this.healthBar = this.fighter.hitpoints;
   }
   render() {
-    // this.el.innerHTML = `
-    // <button class='punch'>Punch!</button>`;
+  
   }
 }

@@ -14,15 +14,15 @@ li.button-list-item {
   display: inline;
   float: left;
 }*/
-div.attack-buttons-player {
+/*div.attack-buttons-player {
   display: inline;
   float: left;
 }
 div.attack-buttons-opponent {
   display: inline;
   float: right;
-}
-button.punch-button {
+}*/
+/*button.punch-button {
   width: 10rem;
   height: 4rem;
   font-size: 20px;
@@ -39,7 +39,7 @@ button.kick-button {
   color: rgb(244, 237, 231);
   border-radius: 30%;
   border: 3px solid black;
-}
+}*/
 /*Attempted to make a background image for a div so that I could
 create a hover effect*/
 /*div.vampire {
@@ -86,11 +86,13 @@ h1.game-title:hover {
   height: 300px;
   width: 450px;
   margin: 0 auto;
-  background-color: rgb(168, 172, 180);
+  background-color: rgb(14, 20, 20);
   position: relative;
+  border-radius: 30%;
   z-index: -1;
   display: block;
   clear: both;
+  border: 5px solid red;
 }
 div.container {
   width: 100%;
@@ -98,7 +100,14 @@ div.container {
   clear: both;
   display: block;
 }
-
+.blue-health {
+  display: inline;
+  float: right;
+}
+.red-health {
+  display: inline;
+  float: left;
+}
 .blue {
   z-index: 1;
   height: 10rem;
@@ -110,7 +119,7 @@ div.container {
   display: inline-block;
   position: relative;
   float: left;
-  bottom: 5px;
+  top: 50px;
 }
 
 .red {
@@ -124,7 +133,7 @@ div.container {
   display: inline-block;
   position: relative;
   float: right;
-  bottom: 5px;
+  top: 50px;
 }
 .fist{
   height: 2rem;

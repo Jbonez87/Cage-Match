@@ -19,3 +19,6 @@ a fighter.js. Opponent and player have basically the same abilities.
 9/3/16 - I'm trying to make a health bar appear over the fighters. I managed
 to create one but I'm having trouble getting it to render damage to either the
 fighter or the opponent.
+
+9/5/16 - I gave up on the healthbar and decided on an h3 within the Nicolas
+Cage divs instead.

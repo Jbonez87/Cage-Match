@@ -90,6 +90,11 @@ class Fighter {
     this.fighter = document.createElement('div');
     this.fighter.setAttribute('class', this.team);
     ringSide.appendChild(this.fighter);
+    let hitpointsDisplay = document.createElement('h3');
+    hitpointsDisplay.setAttribute('class', this.hitpoints);
+    hitpointsDisplay.setAttribute('style', 'color: cyan');
+    hitpointsDisplay.innerHTML = `Health ${this.hitpoints}`;
+    this.fighter.appendChild(hitpointsDisplay);
     let fist = document.createElement('div');
     fist.setAttribute('class', 'fist');
     this.fighter.appendChild(fist);

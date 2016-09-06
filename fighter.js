@@ -37,12 +37,13 @@ class Fighter {
     this.fistOffset = 10;
     this.fighter = null;
     this.side = side;
+    // sets the punch for both fighter and opponent
     this.punch = this.punch.bind(this);
   }
   setOpponent(opponent) { 
     this.opponent = opponent;
   }
-
+// sets the damage to a random amount
   takeDamage(amount) {
     this.hitpoints -= amount;
     //add code to make opponent's blood appear
@@ -54,7 +55,7 @@ class Fighter {
       this.totalClear();
     }
   }
-
+// completely clears the ring and renders the fighters
   totalClear() {
     this.render();
     this.hitpoints = 1000;
@@ -63,13 +64,16 @@ class Fighter {
   }
 
   punch() {
+    // very useful trick. sets this to scope to both start and offset position
     const me = this;
+    // sends the fist forward
     me.fistOffset -= 140;
     me.opponent.takeDamage(Math.floor(Math.random() * 300));
     me.render();
 
     setTimeout(
       function bringBack() {
+        // brings the fist back to start
         me.fistOffset += 140;
         //add code to make opponent's blood disappear
         me.render()
@@ -77,7 +81,7 @@ class Fighter {
       300
     );
   }
-
+// clears the fighters from the board
   clear() {
     if (this.fighter) {
       ringSide.removeChild(this.fighter);
@@ -85,6 +89,7 @@ class Fighter {
     }
   }
 
+  // renders the fists, fighters and health
   render() {
     this.clear();
     this.fighter = document.createElement('div');

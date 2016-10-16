@@ -7,51 +7,7 @@ body {
   z-index: -1;
   clear: both;
 }
-/*ul.button-list {
-  display: block;
-}
-li.button-list-item {
-  display: inline;
-  float: left;
-}*/
-/*div.attack-buttons-player {
-  display: inline;
-  float: left;
-}
-div.attack-buttons-opponent {
-  display: inline;
-  float: right;
-}*/
-/*button.punch-button {
-  width: 10rem;
-  height: 4rem;
-  font-size: 20px;
-  background-color: rgba(167, 16, 16, 0.74);
-  color: rgb(244, 237, 231);
-  border-radius: 30%;
-  border: 3px solid black;
-}
-button.kick-button {
-  width: 10rem;
-  height: 4rem;
-  font-size: 20px;
-  background-color: rgba(167, 16, 16, 0.74);
-  color: rgb(244, 237, 231);
-  border-radius: 30%;
-  border: 3px solid black;
-}*/
-/*Attempted to make a background image for a div so that I could
-create a hover effect*/
-/*div.vampire {
-  z-index: 1;
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-  max-height: 300px;
-  background-image: url("http://i.imgur.com/2hTa544.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}*/
+
 a.title-link {
   text-decoration: none;
 }

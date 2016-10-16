@@ -7,7 +7,7 @@ Two Nicolas Cage's enter the arena, one leaves!
 Who will survive the Cage?
 
 The Game:
-https://jbonez87.github.io/game-to-make/
+https://jbonez87.github.io/Cage-Match/
 
 Built with HTML, CSS and ES6 Javascript
 

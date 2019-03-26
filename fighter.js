@@ -1,5 +1,4 @@
-/* pseudo code section:
-What does the player need to do?
+/*
 -Player should have a name.
 -Player needs a block function.
 -Player needs a punch method (round house kick and special move will be bonus
@@ -15,17 +14,7 @@ Bonuses:
 -A moving animation
 -A kick and special move animation/methods
 -A health bar and a special move bar
--More Cages: Ghost Rider, Castor Troy and Lord of War editions are top
-candidates if time allows
--Sound clips for the two Cages:
-Conair: "This ain't happening. Not here, not now."
-        "I said... Put. The bunny. Back. In the box."
-        "Hoo-ray for the sounds of fucking silence!"
-
-The Wicker Man:
-        "How'd it get burned? How'd it get burned? HOW'D IT GET BURNED? HOW'D IT GET BURNED?!"
-        "KILLING ME WON'T BRING BACK YOUR GODDAMN HONEY!"
-        "No! Not the bees! NOT THE BEES! AHHHHH!"*/
+*/
 const ringSide = document.querySelector('.arena');
 
 class Fighter {
@@ -40,7 +29,7 @@ class Fighter {
     // sets the punch for both fighter and opponent
     this.punch = this.punch.bind(this);
   }
-  setOpponent(opponent) { 
+  setOpponent(opponent) {
     this.opponent = opponent;
   }
 // sets the damage to a random amount
